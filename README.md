@@ -14,7 +14,27 @@ To analyze customer banking data to identify factors influencing loan default ri
 - **Visualization:** Power BI / Tableau (interactive dashboards for loan status & risk segments)
 - **ML Models:** Logistic Regression, Random Forest, Decision Tree
 
+## Objectives
+- Identify key drivers of loan default
+- Analyze borrower and loan characteristics
+- Support data-driven credit risk decisions
 
+## Key Analysis Areas
+- Default vs Non-Default Trends
+- Borrower Demographics
+- Loan Amount & Interest Rate Analysis
+- Credit History Impact
+- Income vs Default Risk
+
+## Tools & Technologies
+- Python (Pandas, NumPy, Matplotlib, Seaborn)
+- SQL (optional)
+- Excel / CSV datasets
+
+## Business Impact
+- Improved credit risk assessment
+- Reduced potential loan losses
+- Enhanced decision-making for lenders
 
 ### Key Steps
 ---
@@ -132,6 +152,149 @@ Kaggle: Loan Prediction Dataset
 - Predictive Modeling (Classification)
 - Dashboard Creation (Power BI / Tableau)
 - Business Intelligence Storytelling
+
+
+
+---
+**EDA + ML Model sections** for **data analysts, risk analysts**.
+---
+
+## Exploratory Data Analysis (EDA)
+
+### Data Understanding
+
+The dataset consists of historical bank loan records containing borrower demographics, financial attributes, loan characteristics, and loan status (default / non-default).
+
+**Key variables analyzed include:**
+
+* Loan Amount
+* Interest Rate
+* Annual Income
+* Credit History / Credit Score
+* Employment Length
+* Loan Purpose
+* Debt-to-Income Ratio
+* Loan Status (Target Variable)
+
+---
+
+### Data Cleaning & Preparation
+
+* Handled missing values using appropriate imputation strategies
+* Removed duplicate and inconsistent records
+* Encoded categorical variables
+* Scaled numerical features for model readiness
+* Addressed class imbalance in default vs non-default loans
+
+---
+
+### Univariate Analysis
+
+* Distribution analysis of income, loan amount, and interest rates
+* Default rate comparison across borrower segments
+* Identification of outliers affecting risk patterns
+
+---
+
+### Bivariate & Multivariate Analysis
+
+* Correlation analysis between financial variables and default risk
+* Default trends across income levels, credit history, and loan purposes
+* Risk segmentation by borrower profile
+
+---
+
+### Key EDA Insights
+
+* Higher default rates observed for borrowers with lower credit history
+* Increased loan amounts and higher interest rates correlate with higher risk
+* Certain loan purposes exhibit elevated default probability
+* Debt-to-income ratio is a strong indicator of default behavior
+
+---
+
+## Machine Learning Model
+
+### Problem Statement
+
+Predict whether a loan applicant is likely to **default** based on historical borrower and loan characteristics.
+
+---
+
+### Model Selection
+
+The following classification models were implemented and evaluated:
+
+* Logistic Regression (Baseline Model)
+* Decision Tree Classifier
+* Random Forest Classifier
+* (Optional) XGBoost / Gradient Boosting
+
+---
+
+### Model Training
+
+* Data split into training and testing sets
+* Feature scaling applied where required
+* Class imbalance handled using resampling techniques (e.g., SMOTE or class weights)
+* Hyperparameter tuning performed using GridSearch / Random Search
+
+---
+
+### Evaluation Metrics
+
+Models were evaluated using:
+
+* Accuracy
+* Precision
+* Recall
+* F1-Score
+* ROC-AUC Score
+* Confusion Matrix
+
+**Primary focus:** Recall and ROC-AUC to minimize false negatives (high-risk borrowers incorrectly approved).
+
+---
+
+### Model Performance (Example)
+
+| Model               | Accuracy | Recall | ROC-AUC |
+| ------------------- | -------- | ------ | ------- |
+| Logistic Regression | 78%      | 72%    | 0.81    |
+| Decision Tree       | 80%      | 74%    | 0.83    |
+| Random Forest       | 85%      | 79%    | 0.88    |
+
+*(according analysis results)*
+
+---
+
+### Feature Importance
+
+* Credit history
+* Debt-to-income ratio
+* Interest rate
+* Annual income
+* Loan amount
+
+These features were the strongest predictors of loan default risk.
+
+---
+
+### Business Impact
+
+* Enables proactive identification of high-risk borrowers
+* Supports smarter credit approval decisions
+* Helps reduce default rates and financial losses
+
+---
+
+### Future Improvements
+
+* Implement explainability using SHAP or LIME
+* Deploy model as a REST API
+* Integrate real-time scoring
+* Add macroeconomic indicators
+
 
 ```
  *#SQL #Python #MachineLearning #BankingAnalytics
